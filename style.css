@@ -63,6 +63,27 @@ nav a {
     text-decoration: none;
     font-weight: bold;
 }
+nav {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+nav {
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: 20px;
+    column-gap: 30px;
+}
+nav {
+    background-color: white;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 30px;
+}
 
 /* Main content */
 main {
@@ -80,6 +101,8 @@ section {
 /* Images */
 img {
     display: block;
+    max-width: 100%;
+    height: auto;
     margin: 20px auto;
 }
 
@@ -177,4 +200,52 @@ form button {
 /* Button when mouse is over it */
 form button:hover {
     background-color: darkgreen;
+}
+/* Flexbox Practice */
+.box-container {
+    display: flex;
+    width: 600px;
+    gap: 10px;
+}
+
+.box {
+    background-color: lightgray;
+    padding: 20px;
+}
+
+.box:first-child {
+    flex-grow: 1;
+}
+/* CSS Grid Practice */
+.grid-container {
+    display: grid;
+}
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+}
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 50px 50px;
+    gap: 15px;
+}
+.grid-box {
+    background-color: lightgray;
+    padding: 30px;
+    border: 1px solid #999;
+}
+@media (max-width: 600px) {
+
+    .grid-container {
+        grid-template-columns: 1fr;
+    }
+
+    nav {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+    }
+
 }
